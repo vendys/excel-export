@@ -1,6 +1,7 @@
-// Prod
+// ==== Prod ====
 const ExcelJS = require("exceljs");
 const FileSaver = require("file-saver");
+// ==============
 
 const DEFAULT_FILE_TYPE =
   "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8";
@@ -297,9 +298,9 @@ const handleFileExport = async (sheetLayout, sheetData, fileName) => {
     .writeBuffer()
     .then((buffer) => {
       const excelData = new Blob([buffer], { type: DEFAULT_FILE_TYPE });
-      // Dev
+      // ==== Dev ====
       // saveAs(excelData, fileName + DEFAULT_FILE_EXTENSION);
-      // Prod
+      // ==== Prod ====
       FileSaver.saveAs(excelData, fileName + DEFAULT_FILE_EXTENSION);
     })
     .catch((error) => {
@@ -307,5 +308,5 @@ const handleFileExport = async (sheetLayout, sheetData, fileName) => {
     });
 };
 
-// Prod
+// ==== Prod ====
 export default handleFileExport;
