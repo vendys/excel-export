@@ -1,6 +1,6 @@
 {
-  "name": "@jungsoo/excel-export",
-  "version": "1.3.1",
+  "name": "@vendys-frontend/excel-export",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/excel.min.js",
   "types": "dist/index.d.ts",
@@ -11,7 +11,7 @@
   "keywords": [
     "vendys"
   ],
-  "author": "jungsoo",
+  "author": "vendys-frontend",
   "license": "ISC",
   "dependencies": {
     "exceljs": "^4.4.0",
